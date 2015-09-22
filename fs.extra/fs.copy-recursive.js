@@ -35,7 +35,7 @@
           , newFile = path.join(dst, root.substr(src.length + 1), stat.name)
           ;
 
-        fsCopy(curFile, newFile, function (err) {
+        fsCopy(curFile, newFile, { replace: true }, function (err) {
           if (err) {
             cb(err);
             return;
